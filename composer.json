@@ -1,0 +1,25 @@
+{
+	"name": "xiewulong/yii2-export",
+	"description": "phpoffice export",
+	"keywords": ["yii2", "xiewulong", "phpoffice", "export"],
+	"type": "yii2-extension",
+	"license": "MIT",
+	"support": {
+		"issues": "https://github.com/xiewulong/yii2-export/issues",
+		"wiki": "https://github.com/xiewulong/yii2-export/wiki",
+		"source": "https://github.com/xiewulong/yii2-export"
+	},
+	"authors": [
+		{
+			"name": "xiewulong",
+			"email": "xiewulong@vip.qq.com"
+		}
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "phpoffice/phpexcel": "*"
+    },
+	"autoload": {
+		"psr-4": {"yii\\export\\": ""}
+	}
+}
