@@ -5,7 +5,7 @@
  * https://github.com/xiewulong/yii2-export
  * https://raw.githubusercontent.com/xiewulong/yii2-export/master/LICENSE
  * create: 2015/8/5
- * update: 2015/8/13
+ * update: 2015/10/21
  * version: 0.0.1
  */
 
@@ -114,7 +114,7 @@ class Manager{
 		switch($this->type){
 			case 'excel':
 				header('Content-Type: application/vnd.ms-excel');
-				header("Content-Disposition: attachment;filename='$filename.xls'");
+				header("Content-Disposition: attachment;filename = $filename.xls");
 				header('Cache-Control: max-age=0');
 				// If you're serving to IE 9, then the following may be needed
 				header('Cache-Control: max-age=1');
