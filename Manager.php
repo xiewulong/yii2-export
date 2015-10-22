@@ -5,7 +5,7 @@
  * https://github.com/xiewulong/yii2-export
  * https://raw.githubusercontent.com/xiewulong/yii2-export/master/LICENSE
  * create: 2015/8/5
- * update: 2015/10/21
+ * update: 2015/10/22
  * version: 0.0.1
  */
 
@@ -111,9 +111,10 @@ class Manager{
 	 * @example $this->output($filename);
 	 */
 	private function output($filename){
+		$filename = urlencode($filename);
 		switch($this->type){
 			case 'excel':
-				header('Content-Type: application/vnd.ms-excel');
+				header('Content-Type: application/vnd.ms-excel; charset=utf-8');
 				header("Content-Disposition: attachment; filename=$filename.xls");
 				header('Cache-Control: max-age=0');
 				// If you're serving to IE 9, then the following may be needed
