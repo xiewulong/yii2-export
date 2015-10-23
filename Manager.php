@@ -5,7 +5,7 @@
  * https://github.com/xiewulong/yii2-export
  * https://raw.githubusercontent.com/xiewulong/yii2-export/master/LICENSE
  * create: 2015/8/5
- * update: 2015/10/22
+ * update: 2015/10/23
  * version: 0.0.1
  */
 
@@ -111,7 +111,9 @@ class Manager{
 	 * @example $this->output($filename);
 	 */
 	private function output($filename){
-		$filename = urlencode($filename);
+		if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') || strpos($_SERVER['HTTP_USER_AGENT'], 'Trident')){
+			$filename = urlencode($filename);
+		}
 		switch($this->type){
 			case 'excel':
 				header('Content-Type: application/vnd.ms-excel; charset=utf-8');
