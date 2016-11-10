@@ -14,11 +14,11 @@
 			"name": "xiewulong",
 			"email": "xiewulong@vip.qq.com"
 		}
-    ],
-    "require": {
-        "yiisoft/yii2": "*",
-        "phpoffice/phpexcel": "*"
-    },
+	],
+	"require": {
+		"yiisoft/yii2": "*",
+		"phpoffice/phpexcel": "*"
+	},
 	"autoload": {
 		"psr-4": {"yii\\export\\": ""}
 	}
